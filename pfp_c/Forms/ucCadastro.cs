@@ -39,9 +39,34 @@ namespace pfp_c
             }
         }
 
+        public void Alterar()
+        {
+
+        }
+
+        public void Excluir()
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             form1.AbrirUserControl(new ucCadastroDigitar(form1, _funcionarioService));
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Alterar();
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excluir();
         }
     }
 }

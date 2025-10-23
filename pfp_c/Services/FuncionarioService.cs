@@ -32,6 +32,13 @@ namespace pfp_c.Services
             return funcionarios ?? new List<Funcionario>();
         }
 
+        public async Task<Funcionario?> BuscarFuncionarioPorIdAsync(long id)
+        {
+            var response = await _httpClient.GetAsync($"{_baseUrl}funcionarioid?id={id}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<Funcionario>();
+        }
+
         public async Task<string> CriarFuncionarioAsync(Funcionario funcionario)
         {
             var response = await _httpClient.PostAsJsonAsync($"{_baseUrl}/funcionarios", funcionario);
@@ -41,6 +48,26 @@ namespace pfp_c.Services
                 return resposta; // Deve vir "Ok"
             else
                 throw new System.Exception($"Erro: {resposta}");
+        }
+        public async Task<string> AtualizarFuncionarioAsync(long id, Funcionario funcionario)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"{_baseUrl}funcionarios?id={id}", funcionario);
+            var resultado = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+                return resultado; 
+            else
+                throw new Exception($"Erro ao atualizar funcionário: {resultado}");
+        }
+        public async Task<string> DeletarFuncionarioAsync(long id)
+        {
+            var response = await _httpClient.DeleteAsync($"{_baseUrl}funcionarios?id={id}");
+            var resultado = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+                return resultado;
+            else
+                throw new Exception($"Erro ao excluir funcionário: {resultado}");
         }
     }
 }

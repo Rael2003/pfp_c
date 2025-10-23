@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             tbCadastro = new DataGridView();
             cNome = new DataGridViewTextBoxColumn();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            alterarToolStripMenuItem = new ToolStripMenuItem();
+            excluirToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)tbCadastro).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -50,6 +55,7 @@
             // 
             tbCadastro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbCadastro.Columns.AddRange(new DataGridViewColumn[] { cNome });
+            tbCadastro.ContextMenuStrip = contextMenuStrip1;
             tbCadastro.Location = new Point(9, 46);
             tbCadastro.Margin = new Padding(4, 3, 4, 3);
             tbCadastro.Name = "tbCadastro";
@@ -60,6 +66,27 @@
             // 
             cNome.HeaderText = "Nome";
             cNome.Name = "cNome";
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, excluirToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(110, 48);
+            contextMenuStrip1.Opening += contextMenuStrip1_Opening;
+            // 
+            // alterarToolStripMenuItem
+            // 
+            alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            alterarToolStripMenuItem.Size = new Size(109, 22);
+            alterarToolStripMenuItem.Text = "Alterar";
+            alterarToolStripMenuItem.Click += alterarToolStripMenuItem_Click;
+            // 
+            // excluirToolStripMenuItem
+            // 
+            excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            excluirToolStripMenuItem.Size = new Size(109, 22);
+            excluirToolStripMenuItem.Text = "Excluir";
+            excluirToolStripMenuItem.Click += excluirToolStripMenuItem_Click;
             // 
             // button1
             // 
@@ -83,6 +110,7 @@
             Name = "ucCadastro";
             Size = new Size(831, 494);
             ((System.ComponentModel.ISupportInitialize)tbCadastro).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
 
@@ -94,5 +122,8 @@
         private System.Windows.Forms.DataGridView tbCadastro;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cNome;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem alterarToolStripMenuItem;
+        private ToolStripMenuItem excluirToolStripMenuItem;
     }
 }
