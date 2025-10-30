@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             label1 = new Label();
             tbCadastro = new DataGridView();
-            cNome = new DataGridViewTextBoxColumn();
             contextMenuStrip1 = new ContextMenuStrip(components);
             alterarToolStripMenuItem = new ToolStripMenuItem();
             excluirToolStripMenuItem = new ToolStripMenuItem();
@@ -54,18 +53,12 @@
             // tbCadastro
             // 
             tbCadastro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tbCadastro.Columns.AddRange(new DataGridViewColumn[] { cNome });
             tbCadastro.ContextMenuStrip = contextMenuStrip1;
             tbCadastro.Location = new Point(9, 46);
             tbCadastro.Margin = new Padding(4, 3, 4, 3);
             tbCadastro.Name = "tbCadastro";
             tbCadastro.Size = new Size(818, 448);
             tbCadastro.TabIndex = 1;
-            // 
-            // cNome
-            // 
-            cNome.HeaderText = "Nome";
-            cNome.Name = "cNome";
             // 
             // contextMenuStrip1
             // 
@@ -121,7 +114,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tbCadastro;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cNome;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem alterarToolStripMenuItem;
         private ToolStripMenuItem excluirToolStripMenuItem;

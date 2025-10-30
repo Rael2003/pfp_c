@@ -34,9 +34,10 @@ namespace pfp_c.Services
 
         public async Task<Funcionario?> BuscarFuncionarioPorIdAsync(long id)
         {
-            var response = await _httpClient.GetAsync($"{_baseUrl}funcionarioid?id={id}");
+            var response = await _httpClient.GetAsync($"{_baseUrl}/funcionarioid?id={id}");
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<Funcionario>();
+            var funcionario = await response.Content.ReadFromJsonAsync<Funcionario>();
+            return funcionario ?? new Funcionario();
         }
 
         public async Task<string> CriarFuncionarioAsync(Funcionario funcionario)

@@ -41,17 +41,18 @@ namespace pfp_c
 
         public void Alterar()
         {
+            form1.AbrirUserControl(new ucCadastroDigitar(form1, _funcionarioService, (long)tbCadastro.CurrentRow.Cells[0].Value));
 
         }
 
         public void Excluir()
         {
-
+            _funcionarioService.DeletarFuncionarioAsync((long)tbCadastro.CurrentRow.Cells[0].Value);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            form1.AbrirUserControl(new ucCadastroDigitar(form1, _funcionarioService));
+            form1.AbrirUserControl(new ucCadastroDigitar(form1, _funcionarioService,0));
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

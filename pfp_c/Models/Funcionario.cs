@@ -9,6 +9,8 @@ namespace pfp_c.Models
 {
     public class Funcionario
     {
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
         [JsonPropertyName("nome_completo")]
         public string NomeCompleto { get; set; } = string.Empty;
 
