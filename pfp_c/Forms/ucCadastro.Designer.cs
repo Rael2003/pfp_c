@@ -49,6 +49,7 @@
             label1.Size = new Size(99, 25);
             label1.TabIndex = 0;
             label1.Text = "Cadastro";
+            label1.Click += label1_Click;
             // 
             // tbCadastro
             // 

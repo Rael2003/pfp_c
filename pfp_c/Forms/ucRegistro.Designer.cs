@@ -28,10 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            button1 = new Button();
+            tbCadastro = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)tbCadastro).BeginInit();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(735, 5);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(88, 27);
+            button1.TabIndex = 4;
+            button1.Text = "Novo";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // tbCadastro
+            // 
+            tbCadastro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tbCadastro.Location = new Point(4, 36);
+            tbCadastro.Margin = new Padding(4, 3, 4, 3);
+            tbCadastro.Name = "tbCadastro";
+            tbCadastro.Size = new Size(818, 448);
+            tbCadastro.TabIndex = 3;
+            // 
+            // ucRegistro
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
+            Controls.Add(tbCadastro);
+            Name = "ucRegistro";
+            Size = new Size(829, 491);
+            ((System.ComponentModel.ISupportInitialize)tbCadastro).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
+        private DataGridView tbCadastro;
     }
 }

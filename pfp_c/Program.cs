@@ -21,14 +21,15 @@ namespace pfp_c
             var services = new ServiceCollection();
             services.AddSingleton<IConfiguration>(config);
             services.AddHttpClient<FuncionarioService>();
+            services.AddHttpClient<ProjetoService>();
 
             var serviceProvider = services.BuildServiceProvider();
 
             ApplicationConfiguration.Initialize();
 
-            // Exemplo de como passar o service pro form principal
             var funcionarioService = serviceProvider.GetRequiredService<FuncionarioService>();
-            Application.Run(new Form1(funcionarioService));
+            var projetoService = serviceProvider.GetRequiredService<ProjetoService>();
+            Application.Run(new Form1(funcionarioService,projetoService));
         }
     }
 }

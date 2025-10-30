@@ -52,7 +52,7 @@ namespace pfp_c
 
         private void button1_Click(object sender, EventArgs e)
         {
-            form1.AbrirUserControl(new ucCadastroDigitar(form1, _funcionarioService,0));
+            form1.AbrirUserControl(new ucCadastroDigitar(form1, _funcionarioService, 0));
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -68,6 +68,11 @@ namespace pfp_c
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Excluir();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -5,11 +5,13 @@ namespace pfp_c
     public partial class Form1 : Form
     {
         FuncionarioService _funcionarioService;
-        public Form1(FuncionarioService funcionarioService)
+        ProjetoService _projetoService;
+        public Form1(FuncionarioService funcionarioService, ProjetoService projetoService)
         {
             InitializeComponent();
 
             _funcionarioService = funcionarioService;
+            _projetoService = projetoService;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace pfp_c
         }
         private void btnAtribuicao_Click_1(object sender, EventArgs e)
         {
-            AbrirUserControl(new ucAtribuicao(this));
+            AbrirUserControl(new ucAtribuicao(this,_projetoService));
         }
 
         private void btnRegistro_Click_1(object sender, EventArgs e)
