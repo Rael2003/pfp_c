@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tbRegistro = new DataGridView();
             label1 = new Label();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            abrirToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)tbRegistro).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tbRegistro
             // 
             tbRegistro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tbRegistro.ContextMenuStrip = contextMenuStrip1;
             tbRegistro.Location = new Point(4, 36);
             tbRegistro.Margin = new Padding(4, 3, 4, 3);
             tbRegistro.Name = "tbRegistro";
@@ -53,6 +58,19 @@
             label1.TabIndex = 6;
             label1.Text = "Registro";
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { abrirToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(101, 26);
+            // 
+            // abrirToolStripMenuItem
+            // 
+            abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            abrirToolStripMenuItem.Size = new Size(100, 22);
+            abrirToolStripMenuItem.Text = "Abrir";
+            abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
+            // 
             // ucRegistro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -62,6 +80,7 @@
             Name = "ucRegistro";
             Size = new Size(829, 491);
             ((System.ComponentModel.ISupportInitialize)tbRegistro).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -69,5 +88,7 @@
         #endregion
         private DataGridView tbRegistro;
         private Label label1;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem abrirToolStripMenuItem;
     }
 }

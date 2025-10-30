@@ -58,3 +58,4 @@ C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_
 C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.ucAtribuicao.resources
 C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.ucRegistro.resources
 C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.sourcelink.json
+C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.Forms.ucRegistroDigitar.resources
