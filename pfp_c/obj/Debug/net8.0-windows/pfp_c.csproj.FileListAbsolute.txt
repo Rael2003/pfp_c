@@ -55,3 +55,6 @@ C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\bin\Debug\net8.0-windows\runt
 C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.csproj.AssemblyReference.cache
 C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.csproj.Up2Date
 C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.Forms.ucCadastroDigitar.resources
+C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.ucAtribuicao.resources
+C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.ucRegistro.resources
+C:\Users\rsouz\OneDrive\Documentos\GIT\pfp_c\pfp_c\obj\Debug\net8.0-windows\pfp_c.sourcelink.json

@@ -41,7 +41,7 @@ namespace pfp_c
 
         private void btnRegistro_Click_1(object sender, EventArgs e)
         {
-            AbrirUserControl(new ucRegistro(this));
+            AbrirUserControl(new ucRegistro(this, _projetoService));
         }
 
         private void btnEstoque_Click_1(object sender, EventArgs e)

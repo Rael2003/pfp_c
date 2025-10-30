@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            tbCadastro = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)tbCadastro).BeginInit();
+            tbRegistro = new DataGridView();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)tbRegistro).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // tbRegistro
             // 
-            button1.Location = new Point(735, 5);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(88, 27);
-            button1.TabIndex = 4;
-            button1.Text = "Novo";
-            button1.UseVisualStyleBackColor = true;
+            tbRegistro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tbRegistro.Location = new Point(4, 36);
+            tbRegistro.Margin = new Padding(4, 3, 4, 3);
+            tbRegistro.Name = "tbRegistro";
+            tbRegistro.Size = new Size(818, 448);
+            tbRegistro.TabIndex = 3;
             // 
-            // tbCadastro
+            // label1
             // 
-            tbCadastro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tbCadastro.Location = new Point(4, 36);
-            tbCadastro.Margin = new Padding(4, 3, 4, 3);
-            tbCadastro.Name = "tbCadastro";
-            tbCadastro.Size = new Size(818, 448);
-            tbCadastro.TabIndex = 3;
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(4, 5);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 25);
+            label1.TabIndex = 6;
+            label1.Text = "Registro";
             // 
             // ucRegistro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
-            Controls.Add(tbCadastro);
+            Controls.Add(label1);
+            Controls.Add(tbRegistro);
             Name = "ucRegistro";
             Size = new Size(829, 491);
-            ((System.ComponentModel.ISupportInitialize)tbCadastro).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbRegistro).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private DataGridView tbCadastro;
+        private DataGridView tbRegistro;
+        private Label label1;
     }
 }
