@@ -6,12 +6,14 @@ namespace pfp_c
     {
         FuncionarioService _funcionarioService;
         ProjetoService _projetoService;
-        public Form1(FuncionarioService funcionarioService, ProjetoService projetoService)
+        PedidoEstoqueService _pedidoService;
+        public Form1(FuncionarioService funcionarioService, ProjetoService projetoService, PedidoEstoqueService pedidoService)
         {
             InitializeComponent();
 
             _funcionarioService = funcionarioService;
             _projetoService = projetoService;
+            _pedidoService = pedidoService;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace pfp_c
 
         private void btnEstoque_Click_1(object sender, EventArgs e)
         {
-            AbrirUserControl(new ucEstoque(this));
+            AbrirUserControl(new ucEstoque(this,_pedidoService));
         }
     }
 }

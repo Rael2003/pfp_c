@@ -22,6 +22,7 @@ namespace pfp_c
             services.AddSingleton<IConfiguration>(config);
             services.AddHttpClient<FuncionarioService>();
             services.AddHttpClient<ProjetoService>();
+            services.AddHttpClient<PedidoEstoqueService>();
 
             var serviceProvider = services.BuildServiceProvider();
 
@@ -29,7 +30,9 @@ namespace pfp_c
 
             var funcionarioService = serviceProvider.GetRequiredService<FuncionarioService>();
             var projetoService = serviceProvider.GetRequiredService<ProjetoService>();
-            Application.Run(new Form1(funcionarioService,projetoService));
+            var pedidoService = serviceProvider.GetRequiredService<PedidoEstoqueService>();
+
+            Application.Run(new Form1(funcionarioService,projetoService,pedidoService));
         }
     }
 }
