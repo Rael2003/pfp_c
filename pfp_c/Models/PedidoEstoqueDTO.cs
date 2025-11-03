@@ -12,8 +12,8 @@ namespace pfp_c.Models
         public DateTime DataPedido { get; set; }
         public long ItemProjetoId { get; set; }
         public long ProdutoEstoqueId { get; set; }
-        public int QuantidadeSolicitada { get; set; }
-        public int QuantidadeAtendida { get; set; }
+        public float QuantidadeSolicitada { get; set; }
+        public float QuantidadeAtendida { get; set; }
         public string Status { get; set; }
     }
 }
