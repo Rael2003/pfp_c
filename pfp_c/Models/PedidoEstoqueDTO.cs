@@ -15,5 +15,7 @@ namespace pfp_c.Models
         public float QuantidadeSolicitada { get; set; }
         public float QuantidadeAtendida { get; set; }
         public string Status { get; set; }
+        public long ProjetoId { get; set; }
+        public string Projeto { get; set; }
     }
 }
